@@ -1,13 +1,13 @@
 # Commerzbank Scraper
-Python-Script, mit dem das Unternehmensregister (https://www.unternehmensregister.de) nach Dokumenten durchsucht wird, die die Commerzbank betreffen.
+Python-Scripte, die das Unternehmensregister (https://www.unternehmensregister.de) nach Stimmrechtsmitteilungen durchsuchen, deren Inhalte speichern und als csv-Datei exportieren.
 
-## Voraussetzungen
+## Abhängigkeiten
 Benötigt Pyhton 2.7.10 mit folgenden Paketen:
 - mechanize
 - bs4
 
 ## Verwendung
 
-- Konfiguration anpassen in `config.py` (Suchbegriff, Zeitraum, Sprache...)
-- zum Srcapen der Seiten: `python scrape.py`
-- zum Parsen der Seiten incl. csv-Export: `python parse.py` (legt eine datei data.csv ins root-Verzeichnis)
+1. Konfiguration anpassen in config.py (Suchbegriff, Zeitraum, Sprache...)
+2. Scrapen: `python scrape.py`
+3. Parsen: incl. csv-Export: `python parse.py` (legt eine datei data.csv ins root-Verzeichnis)
