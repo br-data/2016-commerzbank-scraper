@@ -10,4 +10,4 @@ Benötigt Pyhton 2.7.10 mit folgenden Paketen:
 
 1. Konfiguration anpassen in `config.py` (Suchbegriff, Zeitraum, Sprache...)
 2. Scrapen: `python scrape.py`
-3. Parsen: incl. csv-Export: `python parse.py` (legt eine datei data.csv ins root-Verzeichnis)
+3. Parsen incl. csv-Export: `python parse.py` (legt eine Datei `data.csv` ins root-Verzeichnis)
