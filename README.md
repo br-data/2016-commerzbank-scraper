@@ -1,18 +1,27 @@
 # Commerzbank Scraper
-Python-Scripte, die das Unternehmensregister (https://www.unternehmensregister.de) nach Stimmrechtsmitteilungen durchsuchen, deren Inhalte speichern und als csv-Datei exportieren.
+Jedes Jahr entgehen dem Bund Millionen, weil Banken Steuerschlupflöcher nutzen. Die Commerzbank nutzte sogenannte Cum/Cum-Geschäfte, um Steuern zu sparen. Die dazu getätigten Aktienkäufe hinterlassen Spuren im Unternehmensregister. [BR Data](http://www.br.de/br-data/) und [BR Recherche](http://www.br.de/recherche/) haben diese untersucht.
+
+Diese Sammlung an Python-Skripten dient dazu, das Unternehmensregister (https://www.unternehmensregister.de) nach Stimmrechtsmitteilungen zu durchsuchen, deren Inhalte zu erfassen und strukturiert abzuspeichern.
+
+- **Artikel:** [Cum/Cum - Die Steuertricks der Commerzbank](http://www.br.de/nachrichten/commerzbank-steuertricks-100.html)
+
+## Schnellstart
+1. Repository klonen `git clone https://...`.
+2. Erforderliche Pakete installieren `pip install -r requirements.txt`
+3. Konfiguration anpassen in `config.py`
+4. Scrapen mit `python scrape.py`
+5. Parsen mit `python parse.py`
 
 ## Abhängigkeiten
-Benötigt Pyhton 2.7.10 mit folgenden Paketen:
-- mechanize
-- bs4
+Die Skripte benötigt [Python 2.7](https://www.python.org/download/releases/2.7/) und die Python-Paketverwaltung [pip](https://pypi.python.org/pypi/pip?). Zum Auslesen des Unternehmensregisters verwenden wir [mechanize](https://pypi.python.org/pypi/mechanize/) und [Beautiful Soup](https://pypi.python.org/pypi/beautifulsoup4/).
 
-## Verwendung
-1. Repository klonen `git clone https://...`.
-2. Erforderliche Module installieren `pip install mechanize`, `pip install beautifulsoup4`.
-3. Konfiguration anpassen in `config.py`, scrapen mit `python scrape.py`, anschließend parsen mit `python parse.py`.
+Alle erforderlichen Pakete können mit pip installiert werden:
 
+```
+$ pip install -r requirements.txt
+```
 
-## Workflow
+## Funktionen
 1. **config.py** legt den Namen der Firma fest, nach deren Meldungen gesucht wird, sowie den zu durchsuchenden Veröffentlichungszeitraum.
 2. **scrape.py** speichert die gefunden Meldungen im Verzeichnis `/Sites`.
 3. **parse.py** sucht nach folgenden Inhalten der Stimmrechtsmitteilung:  
